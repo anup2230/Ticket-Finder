@@ -11,7 +11,7 @@ payload = {
 }
 #Discord Auth
 header = {
-    'authorization' : "Mzk4NjgzMDkxMjM0OTc5ODUy.G2cqyG.zefXL2zo4vGVYNh38IVFcdGKtO5GPy--DAdEiU"
+    'authorization' : "Mzk4NjgzMDkxMjM0OTc5ODUy.Gmyx4a.tOiFDp5HabUrDKm0CIz5EPIAI3DpSRZ-IPaCKo"
 }
 
 #artist to search for
@@ -38,4 +38,5 @@ while True:
             payload['content'] = event_title + ": Lowest Price = " + str(lowest_price) + " , " + venue + " | " + city + "\n" + event['url']
             requests.post("https://discord.com/api/v9/channels/1103593266189975625/messages", data=payload, headers=header)
             print(payload['content'])
+            time.sleep(1)
     time.sleep(60)
