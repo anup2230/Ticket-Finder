@@ -7,7 +7,7 @@ MYCLIENTID = "MjY4NzAwNDN8MTY4MDc2NDY4OS4zNDAyMTE"
 MYCLIENTSECRET = "08344d82fc87139119f1f64716e1186caa6fea46897e21ca43603a2c0d34b761"
 
 # Slack API Credentials
-SLACK_BOT_TOKEN = 'xoxb-5220496871392-5196826432690-HBLinTGQ7KLkOJan4VlRblFh'
+SLACK_BOT_TOKEN = 'xoxb-5220496871392-5196826432690-fjtvtMid6NiDZbCRQZpdVhJ8'
 SLACK_CHANNEL_NAME = '#taylor-swift-ticket-bot'
 
 artist = "taylor+swift"
@@ -40,4 +40,5 @@ while True:
             except SlackApiError as e:
                 print("Error sending message: {}".format(e))
             print(result)
+        time.sleep(1)    
     time.sleep(120)
