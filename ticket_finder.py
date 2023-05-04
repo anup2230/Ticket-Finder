@@ -29,4 +29,4 @@ while True:
         if event_title.startswith("Taylor Swift with") and (lowest_price <= 1200):
             print(event_title + ": Lowest Price = " + str(lowest_price))
             print(page_json[i]['url'])
-    time.sleep(30)
+    time.sleep(60)
