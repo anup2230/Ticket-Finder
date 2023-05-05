@@ -18,12 +18,14 @@ def find_tickets():
         page_json = page.json()['events']
 
         for i in range(len(page_json)):
-            event_title = page_json[i]['short_title']
-            lowest_price = page_json[i]['stats']['lowest_price']
-            venue = page_json[i]['venue']
+            event = page_json[i]
+            event_title = event['short_title']
+            lowest_price = event['stats']['lowest_price']
+            venue = event['venue']['name']
+            city = event['venue']['city']
 
             if event_title.startswith("Taylor Swift with") and (lowest_price <= 1000):
-                result += event_title + ": Lowest Price = " + str(lowest_price)
-                result += result + "\n" + page_json[i]['url']
+                result += event_title + ": Lowest Price = " + str(lowest_price) + " , " + venue + " | " + city + "\n" + event['url']
 
         return(result)
+find_tickets()
