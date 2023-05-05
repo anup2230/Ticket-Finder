@@ -1,6 +1,6 @@
 import discord, os, ticket_finder, time
 
-TOKEN = 'MTEwMzU5MTEwNzgzNDY4MzM5Mg.GzSNGD.NiX3ltS_mOIZwCvqRhBRycN2IQ0hoTyLQH3yes'
+TOKEN = 'MTEwMzU5MTEwNzgzNDY4MzM5Mg.GWrgbw.ncodzgGtNNsYLfaD_snI5rdG7bNo10duTfM8JQ'
 client = discord.Client(intents=discord.Intents.default())
 CHANNEL_ID = 1103593266189975625
 
