@@ -24,8 +24,8 @@ def find_tickets():
             venue = event['venue']['name']
             city = event['venue']['city']
 
-            if event_title.startswith("Taylor Swift with") and (lowest_price <= 1000):
+            if event_title.startswith("Taylor Swift") and (lowest_price <= 1000):
                 result += event_title + ": Lowest Price = " + str(lowest_price) + " , " + venue + " | " + city + "\n" + event['url']
-
-        return(result)
+        if result == "": return "No Tickets Found Under the Criteria"
+        else: return(result)
 find_tickets()
