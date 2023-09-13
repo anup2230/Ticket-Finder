@@ -1,6 +1,7 @@
 import discord, os, ticket_finder, time
 
-TOKEN = secrets.DISCORD_TOKEN
+TOKEN = os.environ.get("DISCORD_TOKEN")
+
 client = discord.Client(intents=discord.Intents.default())
 CHANNEL_ID = 1103593266189975625
 
